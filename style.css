@@ -1,0 +1,974 @@
+/*======================================================
+SASP - AIR SUPPORT DIVISION
+======================================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: "Rajdhani", sans-serif;
+
+    background: #090b10;
+
+    color: #ffffff;
+
+}
+
+/*======================================================
+HEADER
+======================================================*/
+
+header {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 70px;
+
+    background: rgba(7, 10, 16, .92);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 999;
+
+    border-bottom: 1px solid rgba(200, 163, 75, .25);
+
+}
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.logo img {
+
+    width: 60px;
+
+}
+
+.logo h2 {
+
+    color: #C8A34B;
+
+    font-size: 30px;
+
+}
+
+.logo p {
+
+    color: #bdbdbd;
+
+}
+
+nav ul {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 30px;
+
+}
+
+nav a {
+
+    text-decoration: none;
+
+    color: white;
+
+    transition: .3s;
+
+    font-weight: 600;
+
+}
+
+nav a:hover,
+nav a.active {
+
+    color: #C8A34B;
+
+}
+
+/*======================================================
+HERO
+======================================================*/
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background:
+        linear-gradient(rgba(5, 8, 12, .82),
+            rgba(5, 8, 12, .82)),
+        url("images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+.hero-content {
+
+    max-width: 900px;
+
+}
+
+.badge {
+
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    border: 1px solid #C8A34B;
+
+    border-radius: 50px;
+
+    color: #C8A34B;
+
+    margin-bottom: 25px;
+
+    letter-spacing: 2px;
+
+}
+
+.hero h1 {
+
+    font-size: 82px;
+
+    color: white;
+
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 25px rgba(0, 0, 0, .7);
+
+}
+
+.hero p {
+
+    font-size: 24px;
+
+    color: #d6d6d6;
+
+    margin-bottom: 45px;
+
+    line-height: 1.8;
+
+}
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+/*======================================================
+BOUTONS
+======================================================*/
+
+.button {
+
+    padding: 15px 35px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    background: #C8A34B;
+
+    color: #111;
+
+    font-weight: bold;
+
+    transition: .35s;
+
+}
+
+.button:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 0 20px rgba(200, 163, 75, .45);
+
+}
+
+.secondary {
+
+    background: transparent;
+
+    border: 2px solid #C8A34B;
+
+    color: #C8A34B;
+
+}
+
+/*======================================================
+SECTIONS
+======================================================*/
+
+.page-title {
+
+    text-align: center;
+
+    padding: 80px 20px 30px;
+
+}
+
+.page-title h1 {
+
+    color: #C8A34B;
+
+    font-size: 48px;
+
+    margin-bottom: 10px;
+
+}
+
+.page-title p {
+
+    color: #bcbcbc;
+
+}
+
+.about {
+
+    width: 85%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 90px 0;
+
+    text-align: center;
+
+}
+
+.about h2 {
+
+    color: #C8A34B;
+
+    font-size: 45px;
+
+    margin-bottom: 30px;
+
+}
+
+.about p {
+
+    font-size: 22px;
+
+    color: #d5d5d5;
+
+    line-height: 1.8;
+
+}
+
+/*======================================================
+CARDS
+======================================================*/
+
+.services {
+
+    width: 90%;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 30px;
+
+    padding-bottom: 70px;
+
+}
+
+.card {
+
+    background: #121820;
+
+    border: 1px solid rgba(200, 163, 75, .15);
+
+    border-radius: 15px;
+
+    padding: 35px;
+
+    transition: .35s;
+
+}
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #C8A34B;
+
+    box-shadow: 0 10px 30px rgba(200, 163, 75, .20);
+
+}
+
+.card h2 {
+
+    color: #C8A34B;
+
+    margin-bottom: 15px;
+
+}
+
+.card p {
+
+    color: #cfcfcf;
+
+    margin-bottom: 25px;
+
+}
+
+/*======================================================
+STATS
+======================================================*/
+
+.stats {
+
+    width: 90%;
+
+    margin: 70px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 25px;
+
+}
+
+.stat {
+
+    text-align: center;
+
+    background: #121820;
+
+    border-radius: 15px;
+
+    padding: 40px;
+
+    border: 1px solid rgba(200, 163, 75, .15);
+
+}
+
+.stat h2 {
+
+    color: #C8A34B;
+
+    font-size: 60px;
+
+}
+
+.stat p {
+
+    color: #d8d8d8;
+
+}
+
+/*======================================================
+FOOTER
+======================================================*/
+
+footer {
+
+    margin-top: 80px;
+
+    padding: 50px;
+
+    background: #05070a;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(200, 163, 75, .2);
+
+}
+
+footer img {
+
+    width: 90px;
+
+}
+
+footer h3 {
+
+    color: #C8A34B;
+
+    margin-top: 20px;
+
+}
+
+footer p {
+
+    color: #9f9f9f;
+
+}
+
+/*======================================================
+ANIMATIONS
+======================================================*/
+
+.card {
+
+    animation: fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/*======================================================
+RESPONSIVE
+======================================================*/
+
+@media(max-width:1000px) {
+
+    header {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 20px;
+
+    }
+
+    nav ul {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 52px;
+
+    }
+
+    .hero p {
+
+        font-size: 20px;
+
+    }
+
+    .about {
+
+        width: 92%;
+
+    }
+
+    .page-title h1 {
+
+        font-size: 38px;
+
+    }
+
+    .services {
+
+        width: 95%;
+
+    }
+
+    .stats {
+
+        width: 95%;
+
+    }
+
+}
+
+/*==========================
+ANIMATIONS
+==========================*/
+
+.hidden {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+}
+
+.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    transition: .8s;
+
+}
+
+/*==========================
+HEADER
+==========================*/
+
+.header-scroll {
+
+    background: rgba(4, 7, 12, .98) !important;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+
+}
+
+/*==========================
+BOUTON HAUT
+==========================*/
+
+.top-button {
+
+    position: fixed;
+
+    bottom: 30px;
+
+    right: 30px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #C8A34B;
+
+    color: #111;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .3s;
+
+    z-index: 999;
+
+}
+
+.show-top {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+/*======================================================
+SOP
+======================================================*/
+
+.sop-hero {
+
+    min-height: 45vh;
+
+}
+
+.sop-container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 60px auto;
+
+}
+
+.sop-box {
+
+    background: #121820;
+
+    border-left: 5px solid #C8A34B;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+
+}
+
+.sop-box h2 {
+
+    color: #C8A34B;
+
+    margin-bottom: 20px;
+
+}
+
+.sop-box p {
+
+    font-size: 20px;
+
+    color: #dddddd;
+
+    line-height: 1.7;
+
+}
+
+.sop-box label {
+
+    display: block;
+
+    padding: 12px;
+
+    margin: 8px 0;
+
+    background: #1a212c;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.sop-box label:hover {
+
+    background: #263242;
+
+}
+
+.sop-box input {
+
+    margin-right: 10px;
+
+    transform: scale(1.2);
+
+}
+
+.radio {
+
+    border-left: 5px solid #3ba4ff;
+
+}
+
+.warning {
+
+    border-left: 5px solid #ffb347;
+
+}
+
+.validation {
+
+    border-left: 5px solid #3ddc84;
+
+}
+
+blockquote {
+
+    background: #0b1016;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    font-style: italic;
+
+    line-height: 1.8;
+
+}
+
+.navigation {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 40px;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+.navigation .button {
+
+    flex: 1;
+
+    text-align: center;
+
+}
+
+/*======================================================
+PAGES (Présentation, SOP, Formations)
+======================================================*/
+
+.page {
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 140px auto 80px;
+
+}
+
+.page h1 {
+
+    color: #C8A34B;
+    font-size: 52px;
+    margin-bottom: 10px;
+
+}
+
+.page h2 {
+
+    color: #C8A34B;
+    font-size: 30px;
+    margin: 35px 0 15px;
+
+}
+
+.page h3 {
+
+    color: #ffffff;
+    margin: 20px 0 10px;
+
+}
+
+.page p {
+
+    color: #d6d6d6;
+    font-size: 20px;
+    line-height: 1.8;
+
+}
+
+.page hr {
+
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid rgba(200, 163, 75, .15);
+
+}
+
+/*======================================================
+SOP / FORMATIONS
+======================================================*/
+
+.page label {
+
+    display: block;
+    padding: 14px 18px;
+    margin: 10px 0;
+    background: #121820;
+    border-left: 4px solid #C8A34B;
+    border-radius: 8px;
+    transition: .3s;
+    cursor: pointer;
+
+}
+
+.page label:hover {
+
+    background: #1b2430;
+
+}
+
+.page input[type="checkbox"] {
+
+    margin-right: 10px;
+    transform: scale(1.15);
+
+}
+
+.page ul,
+.page ol {
+
+    margin-left: 30px;
+    margin-top: 10px;
+    color: #d8d8d8;
+
+}
+
+.page li {
+
+    margin-bottom: 12px;
+    line-height: 1.7;
+
+}
+
+/*======================================================
+RADIO
+======================================================*/
+
+.page blockquote {
+
+    margin: 20px 0;
+    padding: 20px;
+    background: #0b1016;
+    border-left: 4px solid #4da6ff;
+    border-radius: 8px;
+    font-style: italic;
+    color: #dfefff;
+
+}
+
+/*======================================================
+TABLEAUX
+======================================================*/
+
+.page table {
+
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+
+}
+
+.page th {
+
+    background: #C8A34B;
+    color: #111;
+    padding: 15px;
+
+}
+
+.page td {
+
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+.page tr:nth-child(even) {
+
+    background: #121820;
+
+}
+
+/*======================================================
+CARTES INFORMATIONS
+======================================================*/
+
+.info-box {
+
+    background: #121820;
+    border-left: 5px solid #C8A34B;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 30px 0;
+
+}
+
+.info-box h3 {
+
+    color: #C8A34B;
+    margin-bottom: 15px;
+
+}
+
+/*======================================================
+BOUTONS DE NAVIGATION SOP
+======================================================*/
+
+.page .button {
+
+    margin-top: 30px;
+    display: inline-block;
+
+}
+
+/*======================================================
+RESPONSIVE PAGE
+======================================================*/
+
+@media(max-width:900px) {
+
+    .page {
+
+        width: 95%;
+        margin-top: 130px;
+
+    }
+
+    .page h1 {
+
+        font-size: 38px;
+
+    }
+
+    .page h2 {
+
+        font-size: 26px;
+
+    }
+
+    .page p {
+
+        font-size: 18px;
+
+    }
+
+}
